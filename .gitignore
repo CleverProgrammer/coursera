@@ -15,6 +15,10 @@
 
 # ipython notebook misc files
 *.ipynb_checkpoints/
+*.DS_Store
+*.ropeproject/
+*.swp
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -74,4 +78,3 @@ docs/_build/
 
 # PyBuilder
 target/
->>>>>>> 60a2f689ff21be8811b5381215b9fca65dfa4a74
