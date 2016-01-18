@@ -10,9 +10,9 @@ It consists of 6 courses. 2 Beginner, 2 intermediate, and 2 advanced.
 ## Completed Courses:
 Course|Certification
 :--|:--:
-An Introduction to Interactive Programming in Python (Part 1)| [Verified Certificate with Distinction](https://www.coursera.org/account/accomplishments/certificate/J8KHGDMYQC)
-Principles of Computing (Part 1) | [Verified Certificate](https://www.coursera.org/account/accomplishments/certificate/7NC2BWD44K)
-Principles of Computing (Part 2) | [Verified Certificate with Distinction](https://www.coursera.org/account/accomplishments/certificate/XKULJD4N7X)
+[An Introduction to Interactive Programming in Python (Part 1)](https://www.coursera.org/course/interactivepython1)| [Verified Certificate with Distinction](https://www.coursera.org/account/accomplishments/certificate/J8KHGDMYQC)
+[Principles of Computing (Part 1)](https://www.coursera.org/course/principlescomputing1) | [Verified Certificate](https://www.coursera.org/account/accomplishments/certificate/7NC2BWD44K)
+[Principles of Computing (Part 2)](https://www.coursera.org/course/principlescomputing2) | [Verified Certificate with Distinction](https://www.coursera.org/account/accomplishments/certificate/XKULJD4N7X)
 
 ## Current Course: [Algorithmic Thinking (Part 1)](https://www.coursera.org/course/algorithmicthink1)
 Module | Homework | Project | Application
