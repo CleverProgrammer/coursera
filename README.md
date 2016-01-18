@@ -1,7 +1,20 @@
 # Coursera
 ### My Goal: [Fundamentals of Computing Specialization](https://www.coursera.org/specializations/fundamentalscomputing2)
-- It consists of 6 courses. 2 Beginner, 2 intermediate, and 2 advanced. I am currently on the 1st advanced one called Algorithmic Thinking Part 1. Below is the syllabus:
+It consists of 6 courses. 2 Beginner, 2 intermediate, and 2 advanced.
+- **Name**: Rafeh Qazi
+- **GitHub**: [@rafeh01]()
+- **Twitter**: [@RafehQ]()
+- **Linkedin**: [Rafeh Qazi](https://www.linkedin.com/pub/rafeh-qazi/84/a01/78b)
+- **Website**: [My Data Science Blog](http://rafeh01.github.io/data-science)
 
+## Completed Courses:
+Course|Certification
+:--|:--:
+An Introduction to Interactive Programming in Python (Part 1)| [Verified Certificate](https://www.coursera.org/account/accomplishments/certificate/J8KHGDMYQC)
+Principles of Computing (Part 1) | [Verified Certificate](https://www.coursera.org/account/accomplishments/certificate/7NC2BWD44K)
+Principles of Computing (Part 2) | [Verified Certificate with Distinction](https://www.coursera.org/account/accomplishments/certificate/XKULJD4N7X)
+
+## Current Course: [Algorithmic Thinking (Part 1)](https://www.coursera.org/course/algorithmicthink1)
 Module | Homework | Project | Application
 -------|-----------|--------|------------
 1    | Graphs and brute-force algorithms | Degree distributions for graphs | Analysis of citation graphs
