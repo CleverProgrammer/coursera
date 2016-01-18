@@ -1,6 +1,6 @@
 # Coursera
 ### My Goal: [Fundamentals of Computing Specialization](https://www.coursera.org/specializations/fundamentalscomputing2)
-It consists of 6 courses. 2 Beginner, 2 intermediate, and 2 advanced.
+It consists of 6 courses: 2 beginner, 2 intermediate, and 2 advanced.
 - **Name**: Rafeh Qazi
 - **GitHub**: [@QaziPython](https://github.com/QaziPython)
 - **Twitter**: [@RafehQ](https://twitter.com/rafehq)
