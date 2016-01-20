@@ -43,3 +43,5 @@ def make_complete_graph(num_nodes):
     :param num_nodes: int
     :return: dict
     """
+    max_edges = (num_nodes * (num_nodes - 1)) // 2
+    
