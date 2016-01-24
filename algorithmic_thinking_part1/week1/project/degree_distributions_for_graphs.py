@@ -2,9 +2,8 @@
 Instructions: https://class.coursera.org/algorithmicthink1-004/wiki/graph_degree
 Author: Rafeh Qazi
 Date: 01/18/2016
-Course Link: http://www.codeskulptor.org/#user41_x2qtw7LU3V_4.py
+Course Link: http://www.codeskulptor.org/#user41_x2qtw7LU3V_8.py
 """
-
 
 EX_GRAPH0 = {
     0: set([1, 2]),
@@ -64,7 +63,7 @@ def compute_in_degrees(diagraph):
     as digraph whose corresponding values are the number of edges whose head matches a particular node.
 
     :param diagraph: dict
-    :return: dict
+    :return in_deg_counter: dict
 
     >>> compute_in_degrees({0: {1, 2}, 1: {2}, 2: {}})
     {0: 0, 1: 1, 2: 2}
@@ -84,9 +83,33 @@ def compute_in_degrees(diagraph):
 
     return in_deg_counter
 
+
+def in_degree_distribution(diagraph):
+    """
+    Takes a directed graph digraph (represented as a dictionary) and computes the unnormalized
+    distribution of the in-degrees of the graph. The function should return a dictionary
+    whose keys correspond to in-degrees of nodes in the graph. The value associated with each
+    particular in-degree is the number of nodes with that in-degree. In-degrees with no corresponding
+    nodes in the graph are not included in the dictionary
+
+    :param diagraph: dict
+    :return in_degree_dist: dict
+
+    >>> in_degree_distribution({0: {1, 2}, 1: {1}, 2: {}})
+    {0: 1, 1: 1, 2: 1}
+    """
+    node_in_degrees = compute_in_degrees(diagraph)
+    in_degree_dist = {}
+    for in_degree in node_in_degrees.values():
+        if in_degree not in in_degree_dist:
+            in_degree_dist[in_degree] = 1
+        else:
+            in_degree_dist[in_degree] += 1
+    return in_degree_dist
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
     print(compute_in_degrees({0: {1, 2}, 1: {2}, 2: {}}))
     # print(make_complete_graph(3))
-
