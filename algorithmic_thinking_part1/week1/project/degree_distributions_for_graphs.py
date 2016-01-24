@@ -42,43 +42,17 @@ def make_complete_graph(num_nodes):
     that self-loops are not allowed. The nodes of the graph should be numbered 0 to num_nodes - 1 when
     num_nodes is positive. Otherwise, the function returns a dictionary corresponding to the empty graph.
 
-    :param num_nodes: int
-    :return: dict
+    :param int: num_nodes
+    :return dict: all_nodes
     """
-    max_edges = (num_nodes * (num_nodes - 1)) // 2
-    combos = list(itertools.combinations(range(num_nodes), 2))
     all_nodes = {}
-    range_ = range(num_nodes)
-    for combo in combos:
-        if combo[0] not in all_nodes:
-            all_nodes[combo[0]] = {combo[1]}
-        else:
-            all_nodes[combo[0]].add(combo[1])
-
-    # Figure out the range to set to 0 nodes.
-    for i in range_:
-        if i not in all_nodes:
-            range_ = range(i, num_nodes)
-            break
-
-    # Assign that range to 0 nodes or an empty set.
-    for i in range_:
-        all_nodes[i] = {}
+    for num in range(num_nodes):
+        all_nodes[num] = set(range(num_nodes)) - {num}
     return all_nodes
 
 
-def playground():
-    x = list(itertools.combinations(['v1', 'v2', 'v3', 'v4', 'v5', 'v6', 'v7', 'v8'], 2))
-    max_edges = (8 * (8 - 1)) // 2
-    print(max_edges)
-    print(len(x))
-    a = {}
-    key = "somekey"
-    a.setdefault(key, [])
-    a[key].append(1)
-    print(x)
-
-
 if __name__ == '__main__':
-    print(make_complete_graph(8))
+    assert make_complete_graph(3) == {0: {1, 2}, 1: {0, 2}, 2: {0, 1}}
+    assert make_complete_graph(2) == {0: {1}, 1: {0}}
     print(make_complete_graph(3))
+
