@@ -2,8 +2,6 @@
 # Author: Rafeh Qazi
 # Date: 01/18/2016
 
-import itertools
-
 
 EX_GRAPH0 = {
     0: {1, 2},
