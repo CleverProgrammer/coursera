@@ -67,7 +67,7 @@ def compute_in_degrees(diagraph):
     :return: dict
 
     >>> compute_in_degrees({0: {1, 2}, 1: {2}, 2: {}})
-    {1: 1, 2: 2}
+    {0: 0, 1: 1, 2: 2}
     """
     in_deg_counter = {}
     for key in diagraph:
@@ -76,11 +76,17 @@ def compute_in_degrees(diagraph):
                 in_deg_counter[value] = 1
             else:
                 in_deg_counter[value] += 1
+
+    # Set node in degrees to 0 if they have no in degrees.
+    for key in diagraph:
+        if key not in in_deg_counter:
+            in_deg_counter[key] = 0
+
     return in_deg_counter
 
 if __name__ == '__main__':
     import doctest
-    # doctest.testmod()
+    doctest.testmod()
     print(compute_in_degrees({0: {1, 2}, 1: {2}, 2: {}}))
     # print(make_complete_graph(3))
 
