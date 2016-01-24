@@ -70,8 +70,8 @@ def compute_in_degrees(diagraph):
     {0: 0, 1: 1, 2: 2}
     """
     in_deg_counter = {}
-    for key in diagraph:
-        for value in diagraph[key]:
+    for values in diagraph.values():
+        for value in values:
             if value not in in_deg_counter:
                 in_deg_counter[value] = 1
             else:
