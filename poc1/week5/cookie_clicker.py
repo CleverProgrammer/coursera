@@ -12,7 +12,6 @@ Cookie Clicker Simulator
 import simpleplot
 import math
 import random
-# Used to increase the timeout, if necessary
 import codeskulptor
 codeskulptor.set_timeout(20)
 
@@ -228,9 +227,7 @@ def strategy_cheap(total_cookies, cps, history, time_left, build_info):
     """
     Always buy the cheapest item you can afford in the time left.
     """
-
     # Check if I have enough money to purchase any item
-    # (self, total_cookies=0,current_cookies=0,current_seconds=0,current_cps=1):
     obj = ClickerState(total_cookies, 0, 0, cps)
     obj.wait(time_left)
     total_cookies += obj.get_cookies()
@@ -269,7 +266,6 @@ def strategy_expensive(total_cookies, cps, history, time_left, build_info):
     for item in build_info.build_items():
         if total_cookies >= build_info.get_cost(item) > build_info.get_cost(maximum):
             maximum = item
-
     return maximum
 
 
@@ -297,60 +293,12 @@ def run_strategy(strategy_name, time, strategy):
     state = simulate_clicker(provided.BuildInfo(), time, strategy)
     print("Chosen Strategy: " + strategy_name.upper() + "\n" + str(state))
 
-    # Plot total total_cookies over time
-
-    # Uncomment out the lines below to see a plot of total total_cookies vs. time
-    # Be sure to allow popups, if you do want to see it
-
-    #history = state.get_history()
-    #history = [(item[0], item[3]) for item in history]
-    #simpleplot.plot_lines(strategy_name, 1000, 400, 'Time', 'Total total_cookies', [history], True)
-
 
 def run():
     """
     Run the simulator.
     """
-    # run_strategy("Cursor", SIM_TIME, strategy_cursor_broken)
-
-    # Add calls to run_strategy to run additional strategies
     run_strategy("Cheap", SIM_TIME, strategy_cheap)
-    # run_strategy("Expensive", SIM_TIME, strategy_expensive)
     run_strategy("Best", SIM_TIME, strategy_best)
-    # ans1 = run_strategy("Cheap", SIM_TIME, strategy_cheap)
-    # ans2 = run_strategy("Expensive", SIM_TIME, strategy_expensive)
 
-# print(strategy_cheap(500000.0, 1.0, [(0.0, None, 0.0, 0.0)], 5.0,
-#               provided.BuildInfo({'A': [5.0, 1.0],
-#                                   'C': [50000.0, 3.0],
-#                                   'B': [500.0, 2.0]},
-#                                  1.15)))
-# print(provided.BuildInfo({'A': [5.0, 1.0],
-#                          'C': [50000.0, 3.0],
-#                          'B': [500.0, 2.0]},
-#                         1.15).get_cost('A'))
-# print(strategy_expensive(500000.0, 1.0, [(0.0, None, 0.0, 0.0)], 5.0,
-#                   provided.BuildInfo({'A': [5.0, 1.0],
-#                                       'C': [50000.0, 3.0],
-#                                       'B': [500.0, 2.0]}, 1.15)))
-
-# print(strategy_expensive(3.0, 100.0, [(0.0, None, 0.0, 0.0)], 600.0,
-#                   provided.BuildInfo({'A': [5.0, 1.0],
-#                                       'C': [50000.0, 3.0],
-#                                       'B': [500.0, 2.0]},
-#                                      1.15)))
-# == > C
-
-# print(simulate_clicker(provided.BuildInfo({'Cursor': [15.0, 0.10000000000000001]}, 1.15),
-#      5000.0, strategy_none))
-
-# provided.BuildInfo()
-# print(min(provided.BuildInfo().build_items(), key=lambda x: provided.BuildInfo().get_cost(x)))
-# min(build_info.build_items(), key=lambda x: build_info.get_cost(x))
-# -----------------------------------PLAYGROUND-------------------------------------------
 run()
-# print(simulate_clicker(provided.BuildInfo(), SIM_TIME, strategy_cursor_broken))
-
-
-# -------------------------------TESTS----------------------------------------
-# cookie_clicker_testsuite.run_suite(ClickerState)
